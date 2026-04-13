@@ -1,0 +1,106 @@
+# config/finance.yaml
+# Niche: Finance Personnelle & Investissement
+
+niche: finance
+language: fr
+
+# Topic generation settings
+veille:
+  keywords:
+    - investissement debutant
+    - epargne intelligente
+    - bourse pour debutants
+    - liberte financiere
+    - erreurs financieres
+    - ETF indiciels
+    - inflation et patrimoine
+    - budget personnel
+    - passive income
+    - crypto monnaie risques
+  recency_days: 7
+  max_topics: 5
+  sources:
+    - finance
+    - economie
+    - actualite
+
+# Script generation settings
+script:
+  duration_seconds: 60
+  style: educatif_choc
+  hook_style: statistique_surprenante
+  structure:
+    - hook        # 0-5s: stat ou fait choc
+    - probleme    # 5-15s: le probleme commun
+    - solution    # 15-45s: la solution concrete
+    - exemple     # 45-55s: exemple chiffre
+    - cta         # 55-60s: call to action
+  tone: expert_accessible
+  forbidden_words:
+    - "comme je disais"
+    - "en conclusion"
+    - "il faut noter que"
+  max_words: 150
+
+# TTS settings
+tts:
+  voice: fr-FR-HenriNeural
+  rate: "+10%"
+  pitch: "+0Hz"
+  volume: "+0%"
+
+# Visual settings
+visual:
+  style_keywords:
+    - money
+    - finance
+    - investment
+    - stock market
+    - wealth
+    - business
+    - economy
+  color_mood: professional_dark
+  min_clip_duration: 3
+  max_clip_duration: 8
+  clips_count: 8
+  pexels_query_template: "{keyword} finance money"
+
+# Video settings
+video:
+  resolution: "1080x1920"
+  fps: 30
+  format: mp4
+  subtitle_style:
+    font: Arial-Bold
+    fontsize: 72
+    color: white
+    stroke_color: black
+    stroke_width: 3
+    position: center
+  background_music: none
+  fade_in: 0.3
+  fade_out: 0.3
+
+# YouTube publish settings
+youtube:
+  category_id: "22"
+  tags:
+    - finance personnelle
+    - investissement
+    - bourse
+    - epargne
+    - liberte financiere
+    - money
+    - ETF
+    - shorts
+  title_template: "{topic} #Shorts"
+  description_template: |
+    {topic}
+
+    Apprenez a gerer et faire fructifier votre argent intelligemment.
+    Abonnez-vous pour des conseils finance quotidiens.
+
+    {hashtags}
+    #Shorts #Finance #Investissement #ArgentIntelligent
+  privacy: public
+  made_for_kids: false
