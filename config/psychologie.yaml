@@ -1,0 +1,106 @@
+# config/psychologie.yaml
+# Niche: Psychologie & Developpement Personnel
+
+niche: psychologie
+language: fr
+
+# Topic generation settings
+veille:
+  keywords:
+    - psychologie cognitive
+    - biais cognitifs
+    - intelligence emotionnelle
+    - manipulation mentale
+    - confiance en soi
+    - anxiete sociale
+    - effet placebo
+    - psychologie des foules
+    - neurosciences comportementales
+    - pleine conscience
+  recency_days: 7
+  max_topics: 5
+  sources:
+    - science
+    - actualite
+    - etudes
+
+# Script generation settings
+script:
+  duration_seconds: 60
+  style: educatif_choc
+  hook_style: question_provocatrice
+  structure:
+    - hook        # 0-5s: accrocher
+    - revelation  # 5-20s: la revelation
+    - explication # 20-45s: expliquer clairement
+    - action      # 45-55s: conseil actionnable
+    - cta         # 55-60s: call to action
+  tone: direct_empathique
+  forbidden_words:
+    - "en conclusion"
+    - "comme je disais"
+    - "donc voila"
+  max_words: 150
+
+# TTS settings
+tts:
+  voice: fr-FR-HenriNeural
+  rate: "+15%"
+  pitch: "+0Hz"
+  volume: "+0%"
+
+# Visual settings
+visual:
+  style_keywords:
+    - brain
+    - mind
+    - psychology
+    - human behavior
+    - thinking
+    - emotion
+    - neuroscience
+  color_mood: dark_cinematic
+  min_clip_duration: 3
+  max_clip_duration: 8
+  clips_count: 8
+  pexels_query_template: "{keyword} psychology human"
+
+# Video settings
+video:
+  resolution: "1080x1920"
+  fps: 30
+  format: mp4
+  subtitle_style:
+    font: Arial-Bold
+    fontsize: 72
+    color: white
+    stroke_color: black
+    stroke_width: 3
+    position: center
+  background_music: none
+  fade_in: 0.3
+  fade_out: 0.3
+
+# YouTube publish settings
+youtube:
+  category_id: "22"
+  tags:
+    - psychologie
+    - developpement personnel
+    - neurosciences
+    - biais cognitifs
+    - intelligence emotionnelle
+    - shorts
+    - psychology
+    - mindset
+  title_template: "{topic} #Shorts"
+  description_template: |
+    {topic}
+
+    Decouvrez les secrets de la psychologie humaine.
+    Abonnez-vous pour plus de contenu sur la psychologie et le developpement personnel.
+
+    {hashtags}
+    #Shorts #Psychologie #DeveloppementPersonnel
+  privacy: public
+  made_for_kids: false
